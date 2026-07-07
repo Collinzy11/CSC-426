@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRO — Issue Reporting Office</title>
+<meta name="description" content="Report campus and community issues, track them to resolution, and see what unit is handling your case.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><span class="stamp">IRO</span> Issue Reporting Office</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-page="index.html">Home</a></li>
+      <li><a href="report.html" data-page="report.html">Report Issue</a></li>
+      <li><a href="track.html" data-page="track.html">Track Report</a></li>
+      <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+      <li><a href="faq.html" data-page="faq.html">FAQ</a></li>
+      <li><a href="admin.html" data-page="admin.html">Admin</a></li>
+      <li><a href="report.html" class="nav-cta">Report Issue</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div>
+      <span class="eyebrow">Student &amp; community desk</span>
+      <h1>Something's wrong on <span class="hl">campus</span> or in the <span class="hl">community</span>? Log it once. Watch it move.</h1>
+      <p class="lead">IRO gives students and indigenes one place to report issues &mdash; theft, power outages, water faults, security concerns &mdash; and follow every case by its ticket number until it's resolved.</p>
+      <div class="hero-actions">
+        <a href="report.html" class="btn btn-primary"><i class="fa-solid fa-flag"></i> Report an Issue</a>
+        <a href="track.html" class="btn btn-outline"><i class="fa-solid fa-magnifying-glass"></i> Track a Report</a>
+      </div>
+    </div>
+    <div class="ticket">
+      <span class="ticket-eyebrow">Issue ticket</span>
+      <div class="ticket-id">IRO-2026-014</div>
+      <div class="perf"></div>
+      <div class="ticket-row"><span>Issue</span><span>Power Outage</span></div>
+      <div class="ticket-row"><span>Location</span><span>Hostel Block C</span></div>
+      <div class="ticket-row"><span>Assigned unit</span><span>Works Dept.</span></div>
+      <div class="ticket-row"><span>Status</span><span class="badge badge-progress">In progress</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">About IRO</span>
+        <h2>One office, two communities, every kind of issue.</h2>
+        <p>The Issue Reporting Office exists so that no problem &mdash; big or small &mdash; goes unheard because no one knew where to send it. Whether you're a registered student or an indigene of the host community, IRO routes your report to the unit built to fix it, and keeps a paper trail so nothing gets forgotten.</p>
+        <p>Every report gets a ticket number the moment it's filed. That number is your receipt, your proof, and your way of checking progress without chasing anyone down a hallway.</p>
+      </div>
+      <ul class="about-list">
+        <li><i class="fa-solid fa-users"></i><div><strong>Built for two groups.</strong><p style="margin:4px 0 0;">Students and indigenes report through the same form, sorted by category so the right unit sees it first.</p></div></li>
+        <li><i class="fa-solid fa-ticket"></i><div><strong>Every report gets a ticket.</strong><p style="margin:4px 0 0;">A ticket ID like IRO-2026-001 is generated the moment you submit &mdash; keep it to track progress.</p></div></li>
+        <li><i class="fa-solid fa-user-secret"></i><div><strong>Anonymous by choice.</strong><p style="margin:4px 0 0;">Reports can be filed without a name attached, for issues you'd rather not put your identity to.</p></div></li>
+        <li><i class="fa-solid fa-building-shield"></i><div><strong>Routed to real units.</strong><p style="margin:4px 0 0;">Student Affairs, Security, and Works each pick up the categories that belong to them.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>From report to resolved, in four stages.</h2>
+      <p>Every ticket moves through the same pipeline, in this order.</p>
+    </div>
+    <div class="stages">
+      <div class="stage">
+        <span class="stage-num">STAGE 01</span>
+        <h3>Submit</h3>
+        <p>Fill in the report form with what happened, where, and who it affects. Choose to stay anonymous if you'd rather.</p>
+      </div>
+      <div class="stage">
+        <span class="stage-num">STAGE 02</span>
+        <h3>Assigned</h3>
+        <p>Your ticket is routed to the unit responsible for that issue type &mdash; Security, Works, or Student Affairs.</p>
+      </div>
+      <div class="stage">
+        <span class="stage-num">STAGE 03</span>
+        <h3>In Progress</h3>
+        <p>The assigned unit picks it up and works the case. You can check status anytime using your ticket ID.</p>
+      </div>
+      <div class="stage">
+        <span class="stage-num">STAGE 04</span>
+        <h3>Resolved</h3>
+        <p>Once fixed, the ticket is closed out with a final update &mdash; visible the next time you track it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Got something to report right now?</h2>
+    <p>It takes under two minutes, and you'll walk away with a ticket number.</p>
+    <a href="report.html" class="btn btn-primary" style="margin-top:10px;"><i class="fa-solid fa-flag"></i> Report Issue</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="stamp-lg">IRO</div>
+        <p style="max-width:32ch;">The Issue Reporting Office connects students and the host community to the units that fix things.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report.html">Report Issue</a></li>
+          <li><a href="track.html">Track Report</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Units</h4>
+        <ul>
+          <li><a href="#">Student Affairs</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Works Department</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:help@iro.edu.ng">help@iro.edu.ng</a></li>
+          <li><a href="tel:+234 702 529 3654">+234 702 529 3654</a></li>
+          <li><a href="contact.html">Contact page &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Issue Reporting Office. All rights reserved.</span>
+      <span>COLLINZY</span>
+    </div>
+  </div>
+</footer>
+<div id="toast-stack"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

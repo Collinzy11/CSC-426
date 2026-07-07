@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report an Issue — IRO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><span class="stamp">IRO</span> Issue Reporting Office</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-page="index.html">Home</a></li>
+      <li><a href="report.html" data-page="report.html">Report Issue</a></li>
+      <li><a href="track.html" data-page="track.html">Track Report</a></li>
+      <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+      <li><a href="faq.html" data-page="faq.html">FAQ</a></li>
+      <li><a href="admin.html" data-page="admin.html">Admin</a></li>
+      <li><a href="report.html" class="nav-cta">Report Issue</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="container">
+    <span class="breadcrumb">New ticket</span>
+    <h1>Report an issue</h1>
+    <p>Tell us what happened. You'll get a ticket number the moment you submit &mdash; save it to track progress later.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container form-wrap">
+    <div class="card">
+      <form id="reportForm" novalidate>
+
+        <div class="form-row">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="e.g. Adaeze Okafor">
+          <span class="error-msg" id="err-fullName">Enter your full name, or tick "Report anonymously" below.</span>
+        </div>
+
+        <div class="form-row">
+          <label>User Category</label>
+          <div class="radio-group" id="userCategory">
+            <label class="radio-pill"><input type="radio" name="category" value="Student" checked> Student</label>
+            <label class="radio-pill"><input type="radio" name="category" value="Indigene"> Indigene</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="facultyCommunity">Faculty / Community</label>
+          <select id="facultyCommunity" name="facultyCommunity">
+            <option value="">Select faculty or community&hellip;</option>
+            <optgroup label="Faculty (Students)">
+              <option>Faculty of Computing</option>
+              <option>Faculty of Science</option>
+              <option>Faculty of Arts</option>
+              <option>Faculty of Law</option>
+              <option>Faculty of Social &amp; Management Sciences</option>
+              <option>Faculty of Education</option>
+            </optgroup>
+            <optgroup label="Community (Indigenes)">
+              <option>Akungba</option>
+              <option>Etioro</option>
+              <option>Ayegunle</option>
+              <option>Iwaro</option>
+              <option>Others</option>
+              <option>Host Community &mdash; Other</option>
+            </optgroup>
+          </select>
+          <span class="error-msg" id="err-facultyCommunity">Please select a faculty or community.</span>
+        </div>
+
+        <div class="form-row">
+          <label for="issueTitle">Department/Level</label>
+          <input type="text" id="issueTitle" name="issueTitle" placeholder="e.g. Computer Science/200 level">
+          <span class="error-msg" id="err-issueTitle">Ypur Department/Your Level </span>
+        </div>
+
+        <div class="form-row two">
+          <div>
+            <label for="issueType">Issue Type</label>
+            <select id="issueType" name="issueType">
+              <option value="">Select issue type&hellip;</option>
+              <option>Theft</option>
+              <option>Power Outage</option>
+              <option>Water Supply</option>
+              <option>Security Concern</option>
+              <option>Sanitation</option>
+              <option>Harassment</option>
+              <option>Facility Damage</option>
+              <option>Other</option>
+            </select>
+            <span class="error-msg" id="err-issueType">Please choose an issue type.</span>
+          </div>
+          <div>
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="e.g. Hostel Block C, Room 14">
+            <span class="error-msg" id="err-location">Let us know where this happened.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="issueTitle">Issue Title</label>
+          <input type="text" id="issueTitle" name="issueTitle" placeholder="Short summary, e.g. Power outage in Block C">
+          <span class="error-msg" id="err-issueTitle">Give your report a short title.</span>
+        </div>
+        
+
+        <div class="form-row">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" placeholder="Describe what happened, when, and anyone involved."></textarea>
+          <span class="error-msg" id="err-description">Add a few sentences describing the issue (min. 15 characters).</span>
+        </div>
+
+        <div class="form-row">
+          <label for="fileInput">Upload Image (optional)</label>
+          <label class="upload-box" for="fileInput">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <div><strong>Click to upload</strong> a photo of the issue</div>
+            <div class="hint">PNG or JPG, up to 5MB. Frontend preview only &mdash; not stored anywhere.</div>
+            <div id="file-name"></div>
+          </label>
+          <input type="file" id="fileInput" accept="image/*" style="display:none;">
+        </div>
+
+        <div class="form-row">
+          <div class="checkbox-row">
+            <input type="checkbox" id="anonymous" name="anonymous">
+            <label for="anonymous">Report anonymously (your name will be hidden from the assigned unit)</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Submit Report</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Success modal -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal result-ticket">
+    <button class="modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="check-circle"><i class="fa-solid fa-check"></i></div>
+    <h3>Your issue has been submitted successfully.</h3>
+    <p>Keep this ticket ID &mdash; you'll need it to track your report.</p>
+    <div class="ticket">
+      <span class="ticket-eyebrow">Report ID</span>
+      <div class="ticket-id" id="modalTicketId">IRO-2026-001</div>
+      <div class="perf"></div>
+      <div class="ticket-row"><span>Issue</span><span id="modalIssueType">&mdash;</span></div>
+      <div class="ticket-row"><span>Status</span><span class="badge badge-pending">Pending</span></div>
+    </div>
+    <a href="track.html" class="btn btn-outline btn-block" style="margin-top:20px;">Track this report</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="stamp-lg">IRO</div>
+        <p style="max-width:32ch;">The Issue Reporting Office connects students and the host community to the units that fix things.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report.html">Report Issue</a></li>
+          <li><a href="track.html">Track Report</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Units</h4>
+        <ul>
+          <li><a href="#">Student Affairs</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Works Department</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:help@iro.edu.ng">help@iro.edu.ng</a></li>
+          <li><a href="tel:+234 702 529 3654">+234 702 529 3654</a></li>
+          <li><a href="contact.html">Contact page &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Issue Reporting Office. All rights reserved.</span>
+      <span>COLLINZY</span>
+    </div>
+  </div>
+</footer>
+<div id="toast-stack"></div>
+
+<script src="js/app.js"></script>
+<script src="js/report.js"></script>
+</body>
+</html>

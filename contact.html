@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — IRO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><span class="stamp">IRO</span> Issue Reporting Office</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-page="index.html">Home</a></li>
+      <li><a href="report.html" data-page="report.html">Report Issue</a></li>
+      <li><a href="track.html" data-page="track.html">Track Report</a></li>
+      <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+      <li><a href="faq.html" data-page="faq.html">FAQ</a></li>
+      <li><a href="admin.html" data-page="admin.html">Admin</a></li>
+      <li><a href="report.html" class="nav-cta">Report Issue</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="container">
+    <span class="breadcrumb">Get in touch</span>
+    <h1>Contact the office</h1>
+    <p>For anything that doesn't fit a ticket &mdash; general questions, partnership requests, or feedback on the platform itself.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container contact-grid">
+    <div>
+      <div class="card">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="cName">Full Name</label>
+            <input type="text" id="cName" placeholder="Your name">
+            <span class="error-msg" id="err-cName">Please enter your name.</span>
+          </div>
+          <div class="form-row">
+            <label for="cEmail">Email</label>
+            <input type="email" id="cEmail" placeholder="you@example.com">
+            <span class="error-msg" id="err-cEmail">Enter a valid email address.</span>
+          </div>
+          <div class="form-row">
+            <label for="cPhone">Phone Number</label>
+            <input type="tel" id="cPhone" placeholder="e.g. 0803 000 0000">
+          </div>
+          <div class="form-row">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" placeholder="How can we help?"></textarea>
+            <span class="error-msg" id="err-cMessage">Add a short message (min. 10 characters).</span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <div>
+      <span class="eyebrow">Reach us directly</span>
+      <h2 style="margin-top:10px;">Prefer to call or write in?</h2>
+      <ul class="contact-info" style="margin-top:24px;">
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          <div><strong>Email</strong><p style="margin:2px 0 0;">help@iro.edu.ng</p></div>
+        </li>
+        <li>
+          <i class="fa-solid fa-phone"></i>
+          <div><strong>Phone</strong><p style="margin:2px 0 0;">+234 702 529 3654</p></div>
+        </li>
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          <div><strong>Office</strong><p style="margin:2px 0 0;">Student Affairs Building, Ground Floor</p></div>
+        </li>
+        <li>
+          <i class="fa-solid fa-clock"></i>
+          <div><strong>Hours</strong><p style="margin:2px 0 0;">Monday &ndash; Friday, 8am &ndash; 4pm</p></div>
+        </li>
+      </ul>
+      <div class="map-box">
+        <i class="fa-solid fa-map-location-dot" style="font-size:1.6rem;"></i>
+        <span>Map placeholder &mdash; embed goes here</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="stamp-lg">IRO</div>
+        <p style="max-width:32ch;">The Issue Reporting Office connects students and the host community to the units that fix things.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="report.html">Report Issue</a></li>
+          <li><a href="track.html">Track Report</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Units</h4>
+        <ul>
+          <li><a href="#">Student Affairs</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Works Department</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:help@iro.edu.ng">help@iro.edu.ng</a></li>
+          <li><a href="tel:+2348000000000">+234 702 529 3654</a></li>
+          <li><a href="contact.html">Contact page &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Issue Reporting Office. All rights reserved.</span>
+      <span>COLLINZY</span>
+    </div>
+  </div>
+</footer>
+<div id="toast-stack"></div>
+
+<script src="js/app.js"></script>
+<script>
+(function(){
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+    const name = document.getElementById('cName');
+    const email = document.getElementById('cEmail');
+    const message = document.getElementById('cMessage');
+
+    function toggle(input, errId, condition){
+      input.classList.toggle('field-error', !condition);
+      document.getElementById(errId).classList.toggle('show', !condition);
+      if(!condition) valid = false;
+    }
+
+    toggle(name, 'err-cName', name.value.trim().length > 1);
+    toggle(email, 'err-cEmail', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()));
+    toggle(message, 'err-cMessage', message.value.trim().length >= 10);
+
+    if(!valid){
+      IRO.toast('Please fix the highlighted fields.', 'error');
+      return;
+    }
+    IRO.toast('Message sent. We\'ll get back to you soon.', 'success');
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
